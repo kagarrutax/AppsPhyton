@@ -19,7 +19,16 @@ python -m http.server 8765
 ```
 Luego visita: http://localhost:8765
 
-**Tests:**
+### tienda/
+Tienda catálogo PHP MVC + Tailwind CSS 3 (WhatsApp).
+
 ```powershell
-node --test app/calculadora/tests/calculator.test.mjs
+cd app/tienda
+php database/init.php
+php -S localhost:8080 -t public public/index.php
 ```
+
+Admin: `admin@tienda.com` / `admin123`
+
+**Tests:** `php app/tienda/tests/smoke.php`
+

@@ -1,4 +1,4 @@
-/** @typedef {'+' | '-' | '*' | '/'} Operator */
+/** @typedef {'+' | '-' | '*' | '/' | '**'} Operator */
 
 export const MAX_DISPLAY_LENGTH = 16;
 
@@ -21,6 +21,9 @@ export function compute(a, b, operator) {
     case '/':
       if (b === 0) return null;
       return a / b;
+    case '**':
+      const out = Math.pow(a, b);
+      return Number.isFinite(out) ? out : null;
     default:
       return null;
   }

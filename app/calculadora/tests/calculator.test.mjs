@@ -15,6 +15,7 @@ describe('compute', () => {
     assert.equal(compute(10, 4, '-'), 6);
     assert.equal(compute(3, 4, '*'), 12);
     assert.equal(compute(15, 3, '/'), 5);
+    assert.equal(compute(2, 3, '**'), 8);
   });
 
   it('devuelve null en división por cero', () => {

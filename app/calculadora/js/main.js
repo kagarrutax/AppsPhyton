@@ -17,7 +17,7 @@ let accumulator = null;
 let waitingForOperand = false;
 let currentInput = '0';
 
-const symbols = { '+': '+', '-': '−', '*': '×', '/': '÷' };
+const symbols = { '+': '+', '-': '−', '*': '×', '/': '÷', '**': '^' };
 
 function updateDisplay() {
   displayEl.textContent = currentInput;
@@ -133,6 +133,9 @@ function handleAction(action) {
     case 'equals':
       inputEquals();
       break;
+    case 'power':
+      inputOperator('**');
+      break;
     default:
       if (ops[action]) inputOperator(ops[action]);
       else if (/^digit-\d$/.test(action)) inputDigit(action.replace('digit-', ''));
@@ -162,6 +165,7 @@ document.addEventListener('keydown', (event) => {
     Escape: 'clear',
     ',': 'decimal',
     '.': 'decimal',
+    '^': 'power',
   };
   if (map[key]) {
     event.preventDefault();

@@ -1,0 +1,34 @@
+:root {
+  --color-1: #cf26d9;
+  --color-2: #d65c9f;
+  --color-3: #d98c90;
+  --color-4: #3bcc33;
+  --color-5: #1fad5f;
+}
+
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(207, 38, 217, 0.15);
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, var(--color-1), var(--color-2), var(--color-3));
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, var(--color-4), var(--color-5));
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(1.08);
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(207, 38, 217, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(31, 173, 95, 0.1) 0%, transparent 50%);
+}

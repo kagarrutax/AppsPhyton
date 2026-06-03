@@ -1,0 +1,7 @@
+
+# Uploads
+uploads/products/*
+!uploads/products/.gitkeep
+
+# SQLite
+database/*.sqlite

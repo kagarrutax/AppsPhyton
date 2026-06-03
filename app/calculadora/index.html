@@ -3,48 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
+    <title>Calculadora Premium | AI-Assisted Design</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Preload fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="app">
-      <h1 class="app__title">Calculadora</h1>
-      <section class="calculator" aria-label="Calculadora">
+      <h1 class="app__title">Calculador AI</h1>
+      <section class="calculator" aria-label="Calculadora Digital">
         <div class="calculator__screen">
-          <p id="expression" class="calculator__expression" aria-live="polite"></p>
+          <p id="expression" class="calculator__expression" aria-live="polite" aria-label="Expresion actual"></p>
           <p
             id="display"
             class="calculator__display"
             role="status"
             aria-live="polite"
             aria-atomic="true"
+            aria-label="Resultado"
           >
             0
           </p>
         </div>
         <div id="keypad" class="calculator__keypad">
-          <button type="button" class="key key--fn" data-action="clear">C</button>
-          <button type="button" class="key key--fn" data-action="backspace" aria-label="Borrar">⌫</button>
-          <button type="button" class="key key--op" data-action="divide" aria-label="Dividir">÷</button>
-          <button type="button" class="key key--op" data-action="multiply" aria-label="Multiplicar">×</button>
+          <button type="button" class="key key--fn" data-action="clear" aria-label="Limpiar todo (Escape)">C</button>
+          <button type="button" class="key key--fn" data-action="backspace" aria-label="Borrar último carácter (Backspace)">⌫</button>
+          <button type="button" class="key key--op" data-action="power" aria-label="Elevar a la potencia">^</button>
+          <button type="button" class="key key--op" data-action="divide" aria-label="Dividir (/)">÷</button>
 
           <button type="button" class="key" data-action="digit-7">7</button>
           <button type="button" class="key" data-action="digit-8">8</button>
           <button type="button" class="key" data-action="digit-9">9</button>
-          <button type="button" class="key key--op" data-action="subtract" aria-label="Restar">−</button>
+          <button type="button" class="key key--op" data-action="multiply" aria-label="Multiplicar (*)">×</button>
 
           <button type="button" class="key" data-action="digit-4">4</button>
           <button type="button" class="key" data-action="digit-5">5</button>
           <button type="button" class="key" data-action="digit-6">6</button>
-          <button type="button" class="key key--op" data-action="add" aria-label="Sumar">+</button>
+          <button type="button" class="key key--op" data-action="subtract" aria-label="Restar (-)">−</button>
 
           <button type="button" class="key" data-action="digit-1">1</button>
           <button type="button" class="key" data-action="digit-2">2</button>
           <button type="button" class="key" data-action="digit-3">3</button>
-          <button type="button" class="key key--eq" data-action="equals" aria-label="Igual">=</button>
+          <button type="button" class="key key--op" data-action="add" aria-label="Sumar (+)">+</button>
 
           <button type="button" class="key key--zero" data-action="digit-0">0</button>
-          <button type="button" class="key" data-action="decimal" aria-label="Decimal">,</button>
+          <button type="button" class="key" data-action="decimal" aria-label="Punto decimal (.)">,</button>
+          <button type="button" class="key key--eq" data-action="equals" aria-label="Calcular resultado (Enter)">=</button>
         </div>
       </section>
     </main>
